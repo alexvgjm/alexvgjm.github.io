@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Means - Alex Vega</title>
+    <link rel="stylesheet" href="kmeans.css">
+    <script src="kmeans.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>K-Medias</h1>
+        <p>Ejemplo básico del algoritmo de agrupación K-Medias sin refinar</p>
+        <address>Alexander Vega Jiménez</address>
+    </header>
+
+    <main>
+        
+        <p>Distribuye tus datos haciendo click en el área de abajo, idealmente formando grupos, 
+            y añade tantas semillas como grupos quieras detectar.</p> 
+        <p>Si lo prefieres, puedes <button onclick="loadExample()">pulsar aquí</button> para cargar un conjunto de datos de 3 grupos.</p>
+            
+        <section class="controls">
+            <section class="secondary-controls">
+                <button onclick="clearData()">Borrar datos</button>
+                
+                <div class="random-control">
+                    <label for="randomSeeds">Grupos: </label>
+                    <div class="range">
+                        <button onclick="rangeControl(-1, 'randomSeeds')">-</button>
+                        <input type="text" id="randomSeeds" value="3" min="1" max="5" disabled >
+                        <button onclick="rangeControl(1, 'randomSeeds')">+</button>
+                    </div>
+                    <button onclick="placeSeedsRandomly()">Insertar semillas de forma aleatoria</button>
+                    <button onclick="clearSeeds()">Borrar semillas</button>
+                </div>
+            </section>
+        </section>
+        
+
+        <canvas width="800" height="450"></canvas>
+
+        <p>K-medias o K-Means es un algoritmo de agrupamiento <em>(clustering)</em>, que entra en la categoría
+        de aprendizaje no supervisado. Nos permite agrupar datos en distintos
+        grupos o clases, cuando no sabemos exactamente qué valores de determinadas
+        características hacen que un dato perteneza a una clase.</p>
+        <p>El principal requisito y limitación de este método es que debemos
+            conocer el número de clases/grupos que se debe formar (K grupos, 
+            de ahí la K). Determinar el número de grupos es otro problema que
+        se resuelve de forma diferente (algunas variantes como G-Medias, 
+        análisis iterativo de la variabilidad, ...).</p>
+        <h2>Problemas de fiabilidad de K-Medias</h2>
+        <p>Pese a lo contrario que puede creerse, K-Medias fallará más a medida
+        que los grupos están más separados entre sí, es decir, entre más fáciles
+        son de diferenciar para un humano, más difícil es para K-Medias. En estos casos puede
+        identificar un grupo como 2 grupos o diferenciar dos grupos muy separados
+        como uno solo, quedando centroides aislados sin datos. Se debe a que 
+        los centroides tienen convergencia local en lugar de global.</p>
+        <p>Tener un conocimiento previo del conjunto de datos, aunque sea en forma,
+            ayuda drásticamente a conseguir un ajuste fino. Cuando se dispone de ello, 
+            K-medias resulta ser un algoritmo muy sencillo de implementar y con un 
+            rendimiento más que aceptable para solucionar distintos problemas de reconocimiento.</p>
+        <p>Por ello, el análisis estadístico previo del conjunto de datos para decidir
+            cómo distribuir las semillas inicialmente, junto a procedimientos iterativos
+            que repitan los cálculos, son factores decisivos en la calidad de la implementación
+            de este algoritmo.</p>
+        <p>Para un mejor análisis de los inconvenientes y posibles mejoras,
+            aconsejo echar un ojo a <a href="https://www.sciencedirect.com/science/article/pii/S0031320319301608">esta publicación de Pasi Fränti y Sami Sieranoja,
+            de la Universidad de Finlandia Oriental.</a></p>
+        
+    </main>
+
+
+    <footer>
+        <p id="copy">Copyright &copy; Álex Vega under GPLv3+ Free Software license</p>
+    </footer>
+</body>
+
+</html>

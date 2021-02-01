@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dots - Alex Vega</title>
+    <link rel="stylesheet" href="dots.css">
+    <script src="dots.js"></script>
+</head>
+<body>
+    <canvas id="main-canvas" width="1024" height="768"></canvas>
+    <main>
+        <header tabindex="0">
+            <p class="about" onclick="openHeader()">About</p>
+            <button class="close" onclick="closeHeader()">&#x2715</button>
+            <h1>Dots</h1>
+            <p class="subtitle">A canvas API demo</p>
+            <p>See <a href="https://viewer.diagrams.net/?highlight=00005C&edit=_blank&layers=1&nav=1&title=DotsCD#R7Vxtc5s4EP41nmlvph3ebX%2BMnaR3N0mm13SuzUcZFKNGIB%2BI2O6vvwWEeRHY2AG3afGHBJaVBLvPPtKKtUf63Nt8CNDKvWUOpiNNcTYj%2FXKkaao6MeFfLNmmEku3UsEyII5QygX35DsWQkVII%2BLgsKTIGaOcrMpCm%2Fk%2BtnlJhoKArctqj4yWR12hJZYE9zaisvQLcbibSifaOJf%2FicnSzUZWrWl6xUOZsniS0EUOWxdE%2BtVInweM8fTI28wxjY2X2SVtd91wdXdjAfZ5mwYPlxfRf1%2FMvyf24ttq66FPq8%2Ff3u1ujm%2BzJ8YOGECcsoC7bMl8RK9y6Sxgke%2FguFsFznKdG8ZWIFRB%2BA1zvhXeRBFnIHK5R8XVkKOAX8TeAYHPfJzJrgmlolvsO5nGgjL7KRWVFcQAqpG0D9jTzkfxKLKBMgChYImFiE%2FI3eLO5drXfyi6U4wH%2BuC%2FE3qxJQoNhVk%2FYOZhHmxBIcAUcfJchgoSiFvu9HZNPzICt6IpWXRMRXCI2NAm03IXIYsCG4tWRddWOtIUpdyRqZQ7Sp9Y6ggOCs%2BTixLkHIEi60eA6CBAZERUINMIkNTu%2BwDSFkmT8yDJ0pT3im4YwEvmBE7GZThYymm4MvUyQNVJO1yBX9C2oLaKFcLm2x9PK%2FitUln1cfW9%2BnCQ3kGnIBeufEY0Em76Q4I9xxteRimiZOnDsQ0YwwEInnHACcwvF%2BKCRxwnDQgcku9okXQVw1cYDfo1ZyPzMu4LYiAU%2BN0H33gIvNmLt52Dy4ZUDXG%2Bzue6bIpwC9OcVsFBEaElcjnWyFPJyOqrN7JuVIxs%2FWAjq7JNf%2F1J%2FzCnmz8XpxvGq%2BZ0w3gFnK7qv2EkdAzcY4Fhwf0WHW0oxl5gjK29%2BmVgHB5NPzFuqreh60aruOkMquYA1f6g2h59hv5%2BWvy8UjSNBzSdm%2FimZyU%2BGG3P8sEw4GrhU3nW1wLjmuzg3DBOQPrZJX4Fy3VbFEItx3N5U8LqekU7%2BqkWtNq0mgeZdQg9FoPGpCG96h6D%2B6xcSFmvfE74VkJmuCYeRQnpPTKfZyA9LoG1XUKdG7RlUexRAJz9lJ3NXBaQ79AzKgFVgEubljTu45YiBJKkGH%2FMEKZWRLdoU1K8QSEXAptRilYhyRNqD4xN%2FBnjnHlCVIicUX3qXAPvxmzaKnt7UpNLj2uSaQkVp2TTtf7XJP%2BPNIvG%2FnDIMxwu48MNaIz0C%2Fh7F3kLcLFQWQSZRiaBeyi0q%2Blqe3JXrfdRKH7k%2B0AYrpBN%2FOVNonZp5JJPwuCxiEHzR5qQnwsNsZ9QL0e8cftlBi6aK%2B%2FNeCNGm8O5mp8nezMrIOs584EjEUnQggGKaxzDcfYIjDpnlAXJw%2BmPyWdHqIUr6YTXFozNIS8jNMtcp%2B0gaexh0BchUm%2BDSOQ4M%2ByiZwI0%2Bwa0F9hNUbWTxj5IR7pIgBOAg%2BHgbWuknjjqoREOjhtgD8B3YJy3uzAqDH1yUFaHzKx2n1it27FgMitaSxqrs4GilYM4fvO2fRe%2FJcP0xSPjllPbtK%2BZTX7jkfmdZC6XYAYDkUY8DCugPdPRi%2BB14DVPZdGk6roErd2rnyK0TKMnaGXlHQVs5WxzkEXKRhQbCUX7CdFrZpvTWWVy7Oqk1vWa2Zfr5YTpFmzrwUMV2KQdc%2BhtmIPHaf0LaMPqnTbUetroIPLHauWtSrZhU3S%2FVeP%2BcV%2BTiirnS%2BEKY6eS0gADbi6SQIRrt1Fc8EVJ7N5Y6zrybU6YX9BrYo2OqCLF0K%2FFE%2BqBNMZqhxSjtznClJDyl28H8Oz4Eqf%2F2%2FKEMvDEgRoF80Se6G3xqVqS9xGHDGcRcXyHPFzOSnc84MU7rLVM4sVWrr0SwLqj4dLAMC9iGLMThrH6YhitfinymQ280hGvmJXK1N3r90M%2Br1aldOdzef3RxAvbpjUJuPdJXFwwRjHyB8roiDKa8HQkZfSWuGry5uo1xBJb37JoWI90xhvW%2BETeqFa%2Bd%2Bd4Q3K8gzlO8pBPyCFRmBKCL9hiiPxjI1%2FvJPK13iJfTkeuKcbXAfOG2O8y9idmi9g3zxr7ci4yxH6nsX98olAHgP5ifyo59Wf4hlPt95kqZTynlQ5l329sVzt09hLiaq24cmRteVn%2FxbXle01YII0b4hE%2BZJfdZZdVv%2F7wXStNfmfqEf9r05YU8R%2Bad6saW6FNU6sh93zRLDTuZAXa23ZVhvYCuC4Zb8smv9Nb9g64pfLKfEcZBwsN1b64RZd3K%2BsqkepqAw%2BW%2BrgR%2FhcFBMUr2nvsg6UJjWtYT%2BnLTomktD1%2FXMHYUGh0tlJGXamPgiNrGc3eahnl7VonQOs3NvKfUdimWORXREJv%2Fm5bTl39Fl0Lf8Np%2FmMn6SI7%2F8kY%2Fep%2F">this class diagram</a></p>
+            <p id="copy">Copyright &copy; Álex Vega under GPLv3+ Free Software license</p>
+        </header>
+
+        <section class="control-panel closed" id="behaviours-panel">
+            <h2>Behaviours <span onclick="togglePanel('behaviours-panel')"></span></h2>
+            
+            <div id="behaviours-list">
+                <section class="behaviour-control">
+                    <input id="flee-from-mouse" type="checkbox" onchange="checkFleeFromMouse(this);" checked>
+                    <label for="flee-from-mouse">Flee the mouse cursor / touch</label>
+
+                    <div class="range-input-wrapper">
+                        <label for="flee-from-mouse-dr">Detection distance</label>
+                        <input id="flee-from-mouse-dr" 
+                               type="range" min="100" max="600" 
+                               onchange="behaviourAttributeChange('fleeFromMouse', 'detectionRadius', this)"
+                               value="270">
+                        <output for="flee-from-mouse-dr"></output>
+                    </div>
+                </section>
+
+                <section class="behaviour-control">
+                    <input id="back-to-origin" type="checkbox" onchange="checkBackToOrigin(this);" checked>
+                    <label for="back-to-origin">Back to origin (fluidity)</label>
+
+                    <div class="range-input-wrapper">
+                        <label for="back-to-origin-speed">Speed</label>
+                        <input id="back-to-origin-speed" 
+                            type="range" min="0.05" max="2" step="0.05"
+                            onchange="behaviourAttributeChange('backToOrigin', 'speed', this)">
+                        <output for="back-to-origin-speed"></output>
+                    </div>
+                </section>
+
+                <section class="behaviour-control">
+                    <input id="beat" type="checkbox" onchange="checkBeat(this);" checked>
+                    <label for="beat">Beat (increase/decrease)</label>
+
+                    <div class="range-input-wrapper">
+                        <label for="beat-rate">Rate</label>
+                        <input id="beat-rate" 
+                            type="range" min="0" max="2" step="0.05" value="0.1"
+                            oninput="behaviourAttributeChange('beat', 'rate', this)">
+                        <output for="beat-rate"></output>
+                    </div>
+
+                    <div class="range-input-wrapper range-interval">
+                        <label for="beat-min-radius">Min radius</label>
+                        <input id="beat-min-radius"
+                            type="range" min="0" max="48" step="2" value="2"
+                            onchange="behaviourAttributeChange('beat', 'min', this)">
+
+                        <output for="beat-min-radius"></output>
+                    </div>
+
+                    <div class="range-input-wrapper range-interval">
+                        <label for="beat-max-radius">Max radius</label>
+                        <input id="beat-max-radius" 
+                            type="range" min="2" max="50" step="2" value="10"
+                            onchange="behaviourAttributeChange('beat', 'max', this)">
+                        <output for="beat-max-radius"></output>
+                    </div>
+
+                    <button onclick="randomizeSizes()">Randomize sizes in range</button>
+                </section>
+            </div>
+        </section>
+
+        <section class="control-panel closed" id="scene-panel">
+            <h2>Scene <span onclick="togglePanel('scene-panel')"></span></h2>
+
+            <label for="main-color">Main color</label>
+            <input id="main-color" type="color" oninput="changeColor(this)" value="#8e5eb7">
+
+            <div class="range-input-wrapper">
+                <label for="dots-quantity">Dots</label>
+                <input id="dots-quantity" type="range" min="50" max="720" step="10" value="150"
+                       onchange="changeDotsQuantity(this)">
+                <output for="dots-quantity"></output>
+            </div>
+
+            <div class="range-input-wrapper">
+                <label for="hue-variation">Hue variation</label>
+                <input id="hue-variation" type="range" min="0" max="360" step="1" value="80"
+                       oninput="changeHueVariation(this)">
+                <output for="hue-variation"></output>
+            </div>
+        </section>
+
+        <a href="../index.html">Back</a>
+    </main>
+    
+</body>
+</html>

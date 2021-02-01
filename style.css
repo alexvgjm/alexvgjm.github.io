@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap");
+
+:root {
+  --color-primary: #434;
+  --color-second: #140f18;
+  --color-third: #4a4a83;
+  --color-borders: gray;
+
+  --color-font-primary: #eee;
+  --color-font-second: #54b4ec;
+  --color-font-third: #eee;
+
+  --bg-image: #111 url("./img/dashesv2.png");
+  --bg-animation: none;
+  --bg-color: #0000004d;
+  --bg-opaque: #1a1818;
+  --bg-color-second: #2b2035;
+
+  --border-style: dashed;
+  --border-size: 0.15rem;
+  --border-radius: 0;
+
+  --button-radius: 0;
+
+  --font-family: Helvetica, sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 2vh;
+  display: flex;
+  color: var(--color-font-primary);
+  font-family: var(--font-family);
+  background: var(--bg-image);
+
+  animation: var(--bg-animation) 30s infinite linear;
+  max-width: 1366px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+h1,
+h2 {
+  font-size: 2rem;
+  padding: 0.5em 0;
+  margin: 0 0 0.5em 0;
+  border-bottom: var(--border-size) var(--border-style) var(--color-borders);
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  padding: 0.5em;
+}
+
+header,
+main,
+body > section > section,
+#options {
+  border-radius: var(--border-radius);
+  border: var(--border-size) var(--border-style) var(--color-borders);
+  padding: 1em 2em;
+  background-color: var(--bg-color);
+  margin-bottom: 2em;
+  box-shadow: 1.2em 1.2em rgba(0, 0, 0, 0.459);
+  transition: 0.1s transform;
+}
+
+body > section:first-of-type {
+  flex-basis: 20em;
+  text-align: center;
+}
+
+#photo {
+  border: 0.2em var(--border-style) var(--color-borders);
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 7em;
+  height: 7em;
+  background: var(--color-second);
+}
+
+#photo img {
+  width: 7em;
+}
+
+main {
+  flex: 1;
+  margin-left: 2em;
+  min-height: 25em;
+  padding: 1em 2em 3em 2em;
+}
+
+main h2 {
+  margin-bottom: 1em;
+}
+main h2:not(:first-of-type) {
+  margin-top: 2em;
+}
+
+#options {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+#options > div {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+
+#options h2 {
+  align-self: stretch;
+}
+
+#options label:last-of-type {
+  margin-bottom: 1em;
+}
+
+@keyframes bgMove {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 640px 640px;
+  }
+}
+
+input[type="checkbox"] {
+  position: relative;
+  opacity: 0;
+  left: -4000px;
+}
+
+input[type="checkbox"] + label:not(.menu-button) {
+  position: relative;
+  padding: 0;
+}
+
+input[type="checkbox"] + label:not(.menu-button):before {
+  content: "";
+  margin-right: 0.5em;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 1.2em;
+  height: 1.2em;
+  border: 0.2rem var(--border-style) var(--color-borders);
+  border-radius: 0.15em;
+}
+input[type="checkbox"]:hover + label:not(.menu-button):before {
+  border-color: var(--color-font-primary);
+}
+input[type="checkbox"]:checked + label:not(.menu-button):before {
+  background: var(--bg-color-second);
+  border-color: var(--bg-color-second);
+}
+
+input[type="checkbox"]:checked + label:not(.menu-button):after {
+  content: "";
+  position: absolute;
+  left: 0.25em;
+  top: 0.53em;
+  background: white;
+  width: 0.15em;
+  height: 0.15em;
+  box-shadow: 0.15em 0 0 white, 0.3em 0 0 white, 0.3em -0.15em 0 white,
+    0.3em -0.3em 0 white, 0.3em -0.45em 0 white, 0.3em -0.6em 0 white;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.work {
+  color: var(--color-font-third);
+  border-radius: var(--button-radius);
+  display: inline-flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.work:hover h3 {
+  background-color: var(--bg-color-second);
+}
+
+.work img {
+  width: 280px;
+  border-bottom: var(--border-size) var(--border-style) var(--color-borders);
+  border-radius: 2em 2em 0 0;
+}
+
+.work h3 {
+  background-color: var(--color-second);
+  width: 100%;
+  text-align: center;
+  color: var(--color-font-third);
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0.25em 0;
+  border-radius: 0 0 0.2em 0.2em;
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  #toggle-menu {
+    position: absolute;
+    left: -1000;
+  }
+
+  .menu-button {
+    position: fixed;
+    left: 1em;
+    top: 1em;
+    border: var(--border-size) var(--border-style) var(--color-borders);
+    padding: 0.1em 0.3em 0.4em 0.3em;
+    border-radius: 0.25em;
+    z-index: 2000;
+  }
+
+
+
+  .menu-button span {
+    background-color: var(--color-borders);
+    display: block;
+    margin-top: 0.3em;
+    height: 0.2em;
+    width: 1.5em;
+    transition: transform 0.2s;
+  }
+
+  .menu-button:hover {
+    border-color: var(--color-font-second);
+  }
+  .menu-button:hover span {
+    background-color: var(--color-font-second);
+  }
+
+  #toggle-menu:checked + .menu-button:hover {
+    border-color: rgb(168, 81, 81);
+  }
+  #toggle-menu:checked + .menu-button:hover span {
+    background-color:rgb(168, 81, 81);
+  }
+  #toggle-menu:checked + .menu-button {
+    /*padding: 0.1em 0.3em 0.4em 0.3em;*/
+    padding: 0.1em 0em 0.4em 0.6em;
+  }
+  #toggle-menu:checked + .menu-button span:nth-child(2) {
+    background-color: transparent;
+  }
+  #toggle-menu:checked + .menu-button span:nth-child(1) {
+    transform-origin: top left;
+    transform: rotate(45deg);
+  }
+  #toggle-menu:checked + .menu-button span:nth-child(3) {
+    transform-origin: bottom left;
+    transform: rotate(-45deg);
+  }
+
+  .darker {
+    background-color: #0009;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+  }
+
+
+  body > section {
+    left: -50em;
+    position: fixed;
+    max-width: 280px;
+    z-index: 1002;
+    transition: left 0.3s;
+  }
+
+  body > #toggle-menu:checked ~ section {
+    left: 0em;
+  }
+  body > #toggle-menu:checked ~ .darker {
+    display: block;
+  }
+
+  #options,
+  header {
+    border: none;
+    background: none;
+    box-shadow: none;
+    margin: 0;
+    text-align: left;
+  }
+
+  body {
+    padding: 0;
+  }
+  body > section {
+    border-right: var(--border-size) var(--border-style) var(--color-borders);
+    border-bottom: var(--border-size) var(--border-style) var(--color-borders);
+    padding: 0 0.5em 0.5em 0.5em;
+    background: var(--bg-opaque);
+  }
+
+  main {
+    margin-left: 0;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+  }
+
+
+
+}

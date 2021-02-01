@@ -1,0 +1,239 @@
+:root {
+    --color-primary: #434;
+    --color-second: #140f18;
+    --color-third: #4a4a83;
+    --color-borders: gray;
+  
+    --color-font-primary: #eee;
+    --color-font-second: #54b4ec;
+    --color-font-third: #eee;
+  
+    --bg-image:url("../img/dashesv2.png");
+    --bg-animation: none;
+    --bg-color: #111;
+    --bg-color-second: #2b2035;
+  
+    --border-style: dashed;
+    --border-size: 0.15rem;
+    --border-radius: 0;
+  
+    --button-radius: 0;
+  
+    --font-family: Helvetica, sans-serif;
+  }
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--color-font-primary);
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+    font-family: Helvetica, serif;
+    background: var(--bg-color) var(--bg-image);
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 1.5em;
+}
+
+header {
+    padding: 0.75em 0;
+    border-bottom: 0.2rem dashed gray;
+}
+
+
+header p {
+    font-size: 1.25rem;
+}
+
+address {
+    margin-top: 0.4em;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+
+}
+
+main {
+    margin: 0 auto;
+}
+main p {
+    font-size: 1.1rem;
+}
+
+canvas {
+    margin-top: 0.5em;
+    width: 100%;
+    background-color: rgba(19, 19, 19, 0.91);
+    border: 0.1em dashed gray;
+    border-radius: 0.2em;
+}
+
+button, input {
+    padding: 0.1em 0.5em;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.05em #000;
+    background-color: rgb(79, 98, 100);
+    border-radius: 0.2em;
+    border: 0.2em solid rgb(47, 51, 61);
+}
+
+main p {
+    margin: 0.5em 0;
+    text-align: justify;
+}
+
+main h2 {
+    border-bottom: 0.1em solid gray;
+    padding-bottom: 0.2em;
+    margin-bottom: 0.3em;
+}
+
+main h2:not(:first-child) {
+    margin-top: 1em;
+}
+
+.new-example {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.new-example p {
+    width: 100%;
+}
+
+.new-example button {
+    margin: 0.5em 0.25em 0 0.25em;
+    font-size: 1.1rem;
+
+}
+
+.new-example button:hover,
+#page-info button:hover {
+    background-color: rgb(20, 99, 119);
+    border: 0.2em solid rgb(8, 63, 80);
+}
+
+.sidebar section {
+    margin-top: 1em;
+}
+
+.range {
+    display: inline-flex;
+    justify-content: center;
+}
+.range button:first-of-type {
+    background-color: rgb(119, 51, 20);
+    border: 0.2em solid rgb(80, 25, 8);
+}
+
+.range button:first-of-type:hover {
+    background-color: rgb(138, 60, 23);
+    border: 0.2em solid rgb(102, 32, 10);
+}
+
+.range button:nth-of-type(2),
+.new-example button.active {
+    background-color: rgb(20, 119, 53);
+    border: 0.2em solid rgb(8, 80, 32);
+}
+
+.range button:nth-of-type(2):hover,
+.new-example button.active:hover {
+    background-color: rgb(26, 148, 67);
+    border: 0.2em solid rgb(25, 124, 58);
+}
+.range input[type="text"] {
+    width: 3em;
+    margin: 0;
+}
+
+#page-info button{
+    float: right;
+    font-size: 1.2rem;
+    margin: 0.75em 0 0.75em 0.5em;
+}
+
+.error {
+    color: #f88;
+    font-weight: bold;
+    display: none;
+}
+
+.switch {
+    display: inline-flex;
+}
+.switch button {
+    border-color: rgb(14, 92, 59);
+    font-size: 1.25rem;
+}
+.switch button:first-child {
+    margin-right: 0;
+    border-right: none;
+    border-radius: 0.2em 0 0 0.2em;
+}
+.switch button:nth-child(2) {
+    margin-left: 0;
+    border-left: none;
+    border-radius: 0 0.2em 0.2em 0;
+}
+
+.switch button.active {
+    background-color: rgb(14, 92, 59);
+
+}
+
+.switch button:not(.active) {
+    background-color: rgb(38, 40, 41);
+}
+
+.switch button:not(.active):hover {
+    background-color: rgb(4, 41, 71);
+}
+
+.mode-info {
+    font-size: 0.9rem;
+    margin-left: 0.6em;
+    font-style: italic;
+}
+
+.range {
+    margin-right: 0.5em;
+}
+.range button {
+    width: 2.2em;
+}
+.controls {
+    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+}
+.secondary-controls {
+    display: flex;
+    width: 100%;
+    margin-top: 0.5em;
+    justify-content: center;
+    align-items: center;
+}
+.secondary-controls button {
+    padding: 0.5em;
+}
+.secondary-controls > button:not(:first-child) {
+    margin-left: 2em;
+}
+.seeds-control { 
+    display: none; 
+}
+
+.random-control {
+    border: 1px dashed gray;
+    padding: 0.4em;
+    margin-left: 0.4em;
+}
