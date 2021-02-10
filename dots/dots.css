@@ -286,7 +286,7 @@ main {
 }
 
 main > a:last-child {
-  position: absolute;
+  position: fixed;
   bottom: 1em;
   left: 1em;
   font-size: 1.5rem;
@@ -477,16 +477,19 @@ header .close:hover {
   main > a:last-child {
     padding: 1rem 0.5rem;
     max-width: none;
-    width: 100%;
+    width: 90%;
   }
 
   main > header.closed {
-    right: 0;
-    bottom: 7rem;
+    right: 1vw;
+    bottom: 1vh;
+    width: 45%;
   }
   main > a:last-child {
-    left: 0;
+    left: 1vw;
+    bottom: 1vh;
     text-align: center;
+    width: 45%;
   }
 }
 
