@@ -80,6 +80,7 @@ body {
   left: 0;
   top: 0;
 }
+
 /* #endregion                                                                */
 /* ...                                                                       */
 /*****************************************************************************/
@@ -289,6 +290,11 @@ main > a:last-child {
   bottom: 1em;
   left: 1em;
   font-size: 1.5rem;
+  background: var(--color-box-background);
+  box-shadow: 0.4rem 0.4rem rgba(0, 0, 0, 0.452);
+  display: block;
+  padding: 1em 2em;
+  text-decoration: none;
 }
 
 .control-panel,
@@ -466,14 +472,21 @@ header .close:hover {
     overflow-y: auto;
   }
 
-  main > header {
-    padding: 2em 1em;
+
+  main > header,
+  main > a:last-child {
+    padding: 1rem 0.5rem;
     max-width: none;
     width: 100%;
   }
 
   main > header.closed {
     right: 0;
+    bottom: 7rem;
+  }
+  main > a:last-child {
+    left: 0;
+    text-align: center;
   }
 }
 

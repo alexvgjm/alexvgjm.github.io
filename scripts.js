@@ -39,17 +39,17 @@ var themes = {
 
 document.addEventListener("DOMContentLoaded", function (event) {
 
-    var animBgCBox = document.getElementById('stop-anim');
+    var animBgCBox = document.getElementById('toggle-anim');
     var moreSugarCBox = document.getElementById('more-sugar');
 
     animBgCBox.checked = false;
 
-    animBgCBox.onclick = stopAnim;
+    animBgCBox.onclick = toggleAnim;
     moreSugarCBox.onclick = moreSugar;
 });
 
 
-function stopAnim(e) {
+function toggleAnim(e) {
     var checked = e.target.checked;
     setCSSVar('--bg-animation', checked ? 'bgMove' : 'none');
 }
