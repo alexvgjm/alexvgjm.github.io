@@ -46,7 +46,8 @@ body {
   align-items: center;
   min-height: 100vh;
   font-family: Helvetica, serif;
-  background: url("../img/dashesv2.jpg");
+  background: url("../img/dashesv2.png");
+  background-color: #111;
   overflow-y: hidden;
   min-height: 100vh;
 }

@@ -2,8 +2,9 @@
  *  Sitio en desarrollo.
  *  Esta hoja de estilos se ha desarrollado con Desktop First en mente,
  *  a CSS puro (sin pre/postprocesadores). El motivo es únicamente
- *  pedagógico y experimental, hasta ahora sólo había probado Mobile First
- *  y quería ver cómo sería el flujo de diseño de esta manera.
+ *  pedagógico y experimental, hasta ahora sólo había probado Mobile First.
+ *  La página no es lo suficientemente amplia ni compleja como para percibir
+ *  importantes diferencias.
  */
 
 @import url("https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap");
