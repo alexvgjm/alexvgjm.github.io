@@ -1,3 +1,11 @@
+/**
+ *  Sitio en desarrollo.
+ *  Esta hoja de estilos se ha desarrollado con Desktop First en mente,
+ *  a CSS puro (sin pre/postprocesadores). El motivo es únicamente
+ *  pedagógico y experimental, hasta ahora sólo había probado Mobile First
+ *  y quería ver cómo sería el flujo de diseño de esta manera.
+ */
+
 @import url("https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap");
 
 :root {
@@ -33,6 +41,9 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
 body {
   padding: 2vh;
   display: flex;
@@ -44,6 +55,7 @@ body {
   max-width: 1366px;
   margin: 0 auto;
   align-items: flex-start;
+  overflow-x: hidden;
 }
 
 h1,
@@ -189,6 +201,7 @@ input[type="checkbox"]:checked + label:not(.menu-button):after {
   background-color: var(--bg-color-second);
 }
 
+
 .work img {
   width: 280px;
   border-bottom: var(--border-size) var(--border-style) var(--color-borders);
@@ -206,6 +219,12 @@ input[type="checkbox"]:checked + label:not(.menu-button):after {
   border-radius: 0 0 0.2em 0.2em;
   text-decoration: none;
 }
+
+
+#toggle-menu + label p {
+  display: none;
+}
+
 
 @media (max-width: 1024px) {
   #toggle-menu {
@@ -241,6 +260,7 @@ input[type="checkbox"]:checked + label:not(.menu-button):after {
     background-color: var(--color-font-second);
   }
 
+
   #toggle-menu:checked + .menu-button:hover {
     border-color: rgb(168, 81, 81);
   }
@@ -269,7 +289,7 @@ input[type="checkbox"]:checked + label:not(.menu-button):after {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: 1000;
     display: none;
   }
@@ -277,11 +297,12 @@ input[type="checkbox"]:checked + label:not(.menu-button):after {
 
   body > section {
     left: -50em;
-    position: fixed;
     max-width: 280px;
     z-index: 1002;
     transition: left 0.3s;
   }
+
+  
 
   body > #toggle-menu:checked ~ section {
     left: 0em;
@@ -314,6 +335,9 @@ input[type="checkbox"]:checked + label:not(.menu-button):after {
     text-align: center;
     border: none;
     box-shadow: none;
+    background: rgba(0, 0, 0, 0.116);
+    min-height: 100vh;
+    margin-bottom: 0;
   }
 
 
