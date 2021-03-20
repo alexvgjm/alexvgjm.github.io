@@ -199,6 +199,7 @@ input[type="checkbox"]:checked + label:not(.menu-button):after {
   display: inline-flex;
   flex-flow: column;
   align-items: center;
+  margin-right: 0.5em;
 }
 
 .work:hover h3 {

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnical - Alex Vega</title>
+    <link rel="stylesheet" href="carnical.css">
+    <script src="carnical.js"></script>
+</head>
+
+
+<body>
+    <img id="carnico-walk" src="../img/carnico-walk.png" style="display: none">
+    <canvas width="1" height="1"></canvas>
+
+    <main>
+        <img src="../img/carnicov64.gif" alt="">
+        <header tabindex="0">
+            <h1>Carnical</h1>
+            <p class="subtitle colored-letters">To be <span>h</span>onest, I <span>d</span>on't k<span>n</span>ow wh<span>a</span>t this is...</p>
+        </header>
+
+        <section class="control-panel" id="scene-panel">
+            <div class="range-input-wrapper">
+                <label for="meaties-quantity" class="colored-letters">Meat<span>i</span>es</label>
+                <input id="meaties-quantity" type="range" min="10" max="5000" step="10" value="10"
+                       onchange="changeMeaties(this)">
+                <output for="meaties-quantity"></output>
+            </div>
+        </section>
+
+        <footer>
+
+            
+            <p id="copy" class="colored-letters">
+                <a href="../index.html">&#8249;&#8249;&#8249; to <span>h</span>ome page</a> - Copyright &copy; Ále<span>x</span> Vega <span>u</span>nder GP<span>L</span>v3+ Free <span>S</span>oftware license</p>
+        </footer>
+    </main>
+</body>

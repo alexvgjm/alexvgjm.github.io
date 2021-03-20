@@ -1,22 +1,13 @@
 /**
- * NOTA: esta hoja de estilos se ha desarrollado con Desktop First en mente,
- *       a CSS puro (sin pre/postprocesadores). El motivo es únicamente
- *       pedagógico y experimental, hasta ahora sólo había probado Mobile First
- *       y quería ver cómo sería el flujo de diseño de esta manera. Ciertamente
- *       no cambia apenas nada, dado que es una página muy pequeña.
- *
- *
- *                                 ÍNDICE
- *    Puedes buscar por etiquetas [LBL] para navegar entre secciones.
  * -----------------------------------------------------------------------
  *  [GEN] - General. Resets, estilos globales, variables, etc.
- *  [CMP] - Componentes generales (copyright, titulos, subtitulos, etc)
- *  [INP] - Inputs (incluyendo buttons)
+ *  [CMP] - Components
+ *  [INP] - Inputs & buttons
  *  [LAY] - Layout (main, header, etc...)
- *  [SEC] - Secciones principales
+ *  [SEC] - Sections
 
- *  -- media queries --
- *  [BKP-S] - Breakpoint por debajo de 768px
+ *  -- media queries (desktop first) --
+ *  [BKP-S] - Breakpoint under 768
  * -----------------------------------------------------------------------
  *  Todas las secciones son desplegables en un editor que interprete #region.
  */
@@ -49,7 +40,6 @@ body {
   background: url("../img/dashesv2.png");
   background-color: #111;
   overflow-y: hidden;
-  min-height: 100vh;
 }
 
 

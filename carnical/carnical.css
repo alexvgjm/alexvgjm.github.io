@@ -1,0 +1,267 @@
+*,
+*::before,
+*::after {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+    color     : var(--font-color);
+}
+*::first-letter,
+.colored-letters span {
+    color: rgb(167, 89, 82);
+    font-weight: bold;
+}
+
+body {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    min-height      : 100vh;
+    font-family     : Helvetica, serif;
+    background-color: #111;
+    overflow-y      : hidden;
+}
+
+:root {
+    --color-range-sliders         : rgb(148, 78, 71);
+    --color-range-sliders-text    : rgb(189, 149, 117);
+    --color-range-sliders-disabled: rgba(104, 91, 67, 0.404);
+    --color-box-background        : #201922ed;
+    --font-color: rgb(182, 156, 135);
+}
+
+
+canvas {
+    position       : fixed;
+    top            : 0;
+    left           : 0;
+    width          : 100vw;
+    height         : 100vh;
+    z-index        : -1;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+
+main {
+    height               : 95vh;
+    display              : grid;
+    grid-template-rows   : 1fr auto;
+    grid-template-columns: auto auto 1fr auto;
+    width                : 100%;
+    max-width            : 1280px;
+}
+
+header {
+    grid-column: 2;
+}
+
+.control-panel {
+    grid-column: 4;
+}
+
+footer {
+    grid-row-start: 2;
+    grid-column   : 1 / span 4;
+    text-align: center;
+}
+
+/*****************************************************************************/
+/* #region                     [INP] Inputs                                  */
+/*****************************************************************************/
+button {
+    color           : #222;
+    padding         : 0.5em 2em;
+    border-radius   : 0.25em;
+    background-color: #aaa;
+    border          : none;
+    font-weight     : bold;
+    font-size       : 1.25rem;
+    text-shadow     : -0.02em 0.02em #777;
+}
+
+button:hover {
+    color           : #000;
+    background-color: #ccc;
+}
+
+
+input[type="color"] {
+    margin-bottom: 0.2em;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    opacity : 0;
+    left    : -4000px;
+}
+
+input[type="checkbox"]+label {
+    position: relative;
+    cursor  : pointer;
+    padding : 0;
+}
+
+input[type="checkbox"]+label:before {
+    content       : "";
+    margin-right  : 0.5em;
+    display       : inline-block;
+    vertical-align: text-top;
+    width         : 1.2em;
+    height        : 1.2em;
+    border        : 0.2rem solid white;
+    border-radius : 0.15em;
+}
+
+input[type="checkbox"]:hover+label:before {
+    border-color: var(#333);
+}
+
+input[type="checkbox"]:checked+label:before {
+    background  : var(#333);
+    border-color: var(#333);
+}
+
+input[type="checkbox"]:checked+label:after {
+    content   : "";
+    position  : absolute;
+    left      : 0.25em;
+    top       : 0.53em;
+    background: white;
+    width     : 0.15em;
+    height    : 0.15em;
+    box-shadow:
+        0.15em 0 0 white,
+        0.3em 0 0 white,
+        0.3em -0.15em 0 white,
+        0.3em -0.3em 0 white,
+        0.3em -0.45em 0 white,
+        0.3em -0.6em 0 white;
+
+    -webkit-transform: rotate(45deg);
+    transform        : rotate(45deg);
+}
+
+.range-input-wrapper {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: space-around;
+    margin-top     : 1em;
+}
+
+.range-input-wrapper label,
+.range-input-wrapper input {
+    margin-right: 0.7rem;
+    display: inline-block;
+}
+
+.range-input-wrapper label {
+    font-size  : 1.25rem;
+    font-weight: bold;
+    text-align : center;
+}
+
+input[type=range],
+input[type=range]+output {
+    font-size        : 1rem;
+    display          : inline-block;
+    height           : 1.5em;
+    padding          : 0 0.25em;
+    border-radius    : 1em;
+    background-color : transparent;
+    background-size  : 100% 100%;
+    background-repeat: no-repeat;
+    border           : 0.1em solid var(--color-range-sliders);
+    vertical-align   : middle;
+    outline          : none;
+}
+
+input[type=range]+output {
+    display        : inline-flex;
+    justify-content: center;
+    align-items    : center;
+    min-width      : 3em;
+    padding        : 0 0.5em;
+    color          : var(--color-range-sliders-text);
+}
+
+
+input[type=range]:hover,
+input[type=range]:active,
+input[type=range]:focus,
+input[type=range]:focus+output,
+input[type=range]:hover+output,
+input[type=range]:active+output {
+    box-shadow: 0 0 0.5em var(--color-range-sliders);
+}
+
+input[type=checkbox]:not(:checked)~div {
+    display: none;
+}
+
+input[type=range]:hover::-moz-range-thumb,
+input[type=range]:hover::-webkit-slider-thumb {
+    box-shadow: 0 0 0.25em var(--color-range-sliders);
+}
+
+/*
+  input[type=range]:hover {
+     box-shadow: 0 0 0.2em 0.1em #6FC5F0;
+  }*/
+
+input[type=range]::-moz-range-thumb {
+    margin          : 0.05em;
+    padding         : 0;
+    height          : 0.9em;
+    width           : 0.9em;
+    border-radius   : 50%;
+    box-sizing      : border-box;
+    border          : none;
+    background-color: var(--color-range-sliders);
+}
+
+input[type=range]::-webkit-slider-thumb {
+    margin          : 0.05em;
+    padding         : 0;
+    height          : 0.9em;
+    width           : 0.9em;
+    border-radius   : 50%;
+    box-sizing      : border-box;
+    background-color: var(--color-range-sliders);
+}
+
+input[type=range]::-ms-thumb {
+    margin          : 0.05em;
+    padding         : 0;
+    height          : 0.9em;
+    width           : 0.9em;
+    border-radius   : 50%;
+    box-sizing      : border-box;
+    border          : none;
+    background-color: var(--color-range-sliders);
+}
+
+/* browser tweaks */
+input[type=range],
+input[type=range]::-webkit-slider-runnable-track,
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+/* ### IE */
+input[type=range]::-ms-track {
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower,
+input[type=range]::-ms-fill-upper,
+input[type=range]::-ms-tooltip {
+    display: none;
+}
+
+
+/* #endregion                                                                */
+/* ...                                                                       */
+/*****************************************************************************/
