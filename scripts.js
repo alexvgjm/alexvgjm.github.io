@@ -37,12 +37,20 @@ var themes = {
     }
 }
 
+// theme elements/semantic variables
+{
+    themes["dark-alex"]["--avatar-bg-color"] = themes["dark-alex"]["--color-second"];
+    themes["sugar"]["--avatar-bg-color"] = "#cfa7d28c";
+
+}
+
 document.addEventListener("DOMContentLoaded", function (event) {
 
     var animBgCBox = document.getElementById('toggle-anim');
     var moreSugarCBox = document.getElementById('more-sugar');
 
     animBgCBox.checked = false;
+    moreSugar(moreSugarCBox.checked);
 
     animBgCBox.onclick = toggleAnim;
     moreSugarCBox.onclick = moreSugar;
@@ -55,13 +63,9 @@ function toggleAnim(e) {
 }
 
 function moreSugar(e) {
-    
-    if ( e.target.checked ) {
-        applyTheme(themes['sugar']);
-    } else {
-        applyTheme(themes['dark-alex']);
-    }
+    const checked = typeof(e) !== "boolean" ? e.target.checked : e;
 
+    applyTheme(checked ? themes['sugar'] : themes['dark-alex']);
 }
 
 function applyTheme(vars) {

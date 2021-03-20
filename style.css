@@ -32,6 +32,9 @@
   --button-radius: 0;
 
   --font-family: Helvetica, sans-serif;
+  
+
+  --avatar-bg-color: var(--color-second);
 }
 
 *,
@@ -96,7 +99,7 @@ body > section:first-of-type {
   margin: 0 auto;
   width: 7em;
   height: 7em;
-  background: var(--color-second);
+  background: var(--avatar-bg-color);
 }
 
 #photo img {
@@ -300,8 +303,10 @@ input[type="checkbox"]:checked + label:not(.menu-button):after {
     position: fixed;
     left: -50em;
     max-width: 280px;
+    max-height: 100vh;
     z-index: 1002;
     transition: left 0.3s;
+    overflow-y: auto;
   }
 
   
