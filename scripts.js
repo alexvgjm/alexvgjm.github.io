@@ -65,7 +65,16 @@ function toggleAnim(e) {
 function moreSugar(e) {
     const checked = typeof(e) !== "boolean" ? e.target.checked : e;
 
-    applyTheme(checked ? themes['sugar'] : themes['dark-alex']);
+    const avatar = document.querySelector("#photo img");
+    if(checked) {
+        applyTheme(themes['sugar']);
+        avatar.src = "img/carnico-repostero.gif";
+        avatar.classList.add("repo");
+    } else {
+        applyTheme(themes['dark-alex']);
+        avatar.src = "img/carnicov64.gif";
+        avatar.classList.remove("repo");
+    }
 }
 
 function applyTheme(vars) {
