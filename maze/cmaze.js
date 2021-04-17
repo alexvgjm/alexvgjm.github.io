@@ -208,8 +208,8 @@ function interactiveBacktracking() {
         // Open border
         const lastRow = maze[maze.length-1];
         lastRow[randomInt(0,lastRow.length-1)] &= 0b00111;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         drawMaze();
-        drawPaths();
         return;
     }
 

@@ -13,13 +13,14 @@
 <body>
     <header>
         <h1>Circular Maze Generator</h1>
+        <p>Demonstration of backtracking algorithm for procedural generation</p>
         <p>Made with ❤️ using <span>HTML Canvas</span> and vanilla <span>JavaScript</span></p>
     </header>
     
     <main>
         <canvas id="maze-canvas" width="1" height="1"></canvas>
         <div class="range-input-wrapper">
-            <label for="maze-size" class="colored-letters">Difficulty</label>
+            <label for="maze-size" class="colored-letters">Size</label>
             <input id="maze-size" type="range" min="2" max="8" step="1" value="5"
                    oninput="changeSize(this)">
         </div>
@@ -27,5 +28,5 @@
     </main>
 
     </section>
-    <footer>Copyleft <span class="copyleft">&copy;</span> Alex Vega - GPLv3+ license</footer>
+    <footer><a href="../index.html">Back to homepage</a> - Copyleft <span class="copyleft">&copy;</span> Alex Vega - GPLv3+ license</footer>
 </body>

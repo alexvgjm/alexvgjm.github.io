@@ -1,3 +1,15 @@
+
+:root {
+    --color-box-background        : #201922ed;
+    --color-lines:#7fc0bb;
+    --color-font: #7fc0bb;
+    --color-secondary: #d94878;
+
+    
+    --color-range-sliders         : var(--color-font);
+    --color-range-sliders-text    : var(--color-font);
+}
+
 *,
 *::before,
 *::after {
@@ -27,16 +39,7 @@ header, p {
     text-align: center;
 }
 
-:root {
-    --color-box-background        : #201922ed;
-    --color-lines:#7fc0bb;
-    --color-font: #7fc0bb;
-    --color-secondary: #d94878;
 
-    
-    --color-range-sliders         : var(--color-font);
-    --color-range-sliders-text    : var(--color-font);
-}
 
 canvas {
     flex-grow: 1;
@@ -53,7 +56,8 @@ canvas {
 footer {
     margin-top: 2em;
 }
-p span {
+p span,
+a {
     color: var(--color-secondary);
     font-weight: bold;
 }
