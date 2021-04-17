@@ -209,6 +209,8 @@ function interactiveBacktracking() {
         const lastRow = maze[maze.length-1];
         lastRow[randomInt(0,lastRow.length-1)] &= 0b00111;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        
         drawMaze();
         return;
     }
@@ -286,7 +288,6 @@ function drawCurvedWall(r, ang, sizeInAng) {
 }
 
 function drawMaze() {
-    
     ctx.fillStyle = linesColor;
     ctx.beginPath()
     ctx.arc(center.x, center.y, offset/8, 0, TAU);
@@ -297,6 +298,7 @@ function drawMaze() {
     }
     //drawCircle(0);
 }
+
 
 function drawSegment(pos) {
     ctx.lineWidth = ringWidth / 10;

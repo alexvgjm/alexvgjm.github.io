@@ -1,4 +1,6 @@
-var themes = {
+
+
+let themes = {
     "dark-alex": {
         "--color-primary": "#434",
         "--color-second": "#140f18",
@@ -44,29 +46,39 @@ var themes = {
 
 }
 
-document.addEventListener("DOMContentLoaded", function (event) {
 
-    var animBgCBox = document.getElementById('toggle-anim');
-    var moreSugarCBox = document.getElementById('more-sugar');
-
-    animBgCBox.checked = false;
-    moreSugar(moreSugarCBox.checked);
-
+document.addEventListener("DOMContentLoaded", () => {
+    const animBgCBox = document.getElementById('toggle-anim');
+    const moreSugarCBox = document.getElementById('more-sugar');
     animBgCBox.onclick = toggleAnim;
     moreSugarCBox.onclick = moreSugar;
 });
 
 
+// webkit doesn't load checkbox state after back button on DOMContentLoaded.
+// Is necessary use window.onload in order tu use previous state.
+window.onload = () => {
+    const animBgCBox = document.getElementById('toggle-anim');
+    const moreSugarCBox = document.getElementById('more-sugar');
+
+    toggleAnim({ target: animBgCBox });
+    console.log(animBgCBox.checked);
+
+    console.log("test");
+    moreSugar(moreSugarCBox.checked);
+}
+
+
+
 function toggleAnim(e) {
-    var checked = e.target.checked;
-    setCSSVar('--bg-animation', checked ? 'bgMove' : 'none');
+    setCSSVar('--bg-animation', e.target.checked ? 'bgMove' : 'none');
 }
 
 function moreSugar(e) {
-    const checked = typeof(e) !== "boolean" ? e.target.checked : e;
+    const checked = typeof (e) !== "boolean" ? e.target.checked : e;
 
     const avatar = document.querySelector("#photo img");
-    if(checked) {
+    if (checked) {
         applyTheme(themes['sugar']);
         avatar.src = "img/carnico-repostero.gif";
         avatar.classList.add("repo");
@@ -78,8 +90,8 @@ function moreSugar(e) {
 }
 
 function applyTheme(vars) {
-    var keys = Object.keys(vars);
-    for(var i = 0; i < keys.length; i++) {
+    let keys = Object.keys(vars);
+    for (let i = 0; i < keys.length; i++) {
         setCSSVar(keys[i], vars[keys[i]]);
     }
 }

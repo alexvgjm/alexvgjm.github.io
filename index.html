@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="scripts.js"></script>
 </head>
-<body>
+<body onunload="">
     <input type="checkbox" id="toggle-menu">
 
     <label for="toggle-menu" class="menu-button">
@@ -20,8 +20,7 @@
     <section>
         <header>
             <div id="photo"><img src="img/carnicov64.gif" 
-                alt="Fotografía de perfil de Alexander Vega (en realidad es 
-                     un cacho de carne latente con apéndices)"></div>
+                alt="Face of Alexander Vega"></div>
             
             <h1>Álex Vega</h1>       
             <p>Inconsequential design experiments.</p>
@@ -30,12 +29,12 @@
         <section id="options">
             <h2>Options</h2>
 
-            <div>
+            <form>
                 <input id="toggle-anim" type="checkbox">
                 <label for="toggle-anim">Background animation</label>
                 <input id="more-sugar" type="checkbox">
                 <label for="more-sugar">More sugar!</label>
-            </div>
+            </form>
         </section>
     
     </section>
