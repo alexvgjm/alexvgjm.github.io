@@ -43,8 +43,9 @@ header, p {
 
 canvas {
     flex-grow: 1;
-    max-height: 500px;
+    max-height: 400px;
     margin-top: 2em;
+    max-width: 100vw;
 }
 
 .copyleft {
@@ -55,6 +56,7 @@ canvas {
 
 footer {
     margin-top: 2em;
+    text-align: center;
 }
 p span,
 a {
@@ -213,3 +215,9 @@ input[type=range]::-ms-tooltip {
 /* #endregion                                                                */
 /* ...                                                                       */
 /*****************************************************************************/
+
+@media (max-width: 480px) {
+    canvas {
+        max-height: 320px;
+    }
+}
