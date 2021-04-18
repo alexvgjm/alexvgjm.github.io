@@ -1,83 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Álex Vega</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="newTheme.css">
     <script src="scripts.js"></script>
 </head>
+
 <body onunload="">
-    <input type="checkbox" id="toggle-menu">
+    <!--<input type="checkbox" id="toggle-menu">
 
     <label for="toggle-menu" class="menu-button">
         <span></span>
         <span></span>
         <span></span>
         <p>Desplegar menú</p>
-    </label>
+    </label>-->
 
-    <section>
-        <header>
-            <div id="photo"><img src="img/carnicov64.gif" 
-                alt="Face of Alexander Vega"></div>
-            
-            <h1>Álex Vega</h1>       
-            <p>Inconsequential design experiments.</p>
-        </header>
+    <header>
+        <p>The weird sandbox of</p>
+        <div id="photo"><img src="img/carnicov64.gif" alt="Face of Alexander Vega"></div>
 
-        <section id="options">
-            <h2>Options</h2>
+        <h1>Álex Vega</h1>
+    </header>
 
-            <form>
-                <input id="toggle-anim" type="checkbox">
-                <label for="toggle-anim">Background animation</label>
-                <input id="more-sugar" type="checkbox">
-                <label for="more-sugar">More sugar!</label>
-            </form>
-        </section>
-    
+    <section id="options">
+        <h2>Options</h2>
+
+        <form>
+            <input id="toggle-anim" type="checkbox">
+            <label for="toggle-anim">Background animation</label>
+            <input id="more-sugar" type="checkbox">
+            <label for="more-sugar">More sugar!</label>
+        </form>
     </section>
 
     <label class="darker" for="toggle-menu"></label>
 
     <main>
-        <h2>Procedural Generation</h2>
         <a href="maze/cmaze.html">
             <article class="work">
-                <img src="img/cmaze-thumbnail.jpg" 
-                     alt="Thumbnail of the circular maze generator page">
+                <img src="img/cmaze-thumbnail.jpg" alt="Thumbnail of the circular maze generator page">
                 <h3>Circular Maze Generator</h3>
-            </article>
-        </a>
-
-        <h2>Machine Learning</h2>        
-        <a href="kmeans/kmeans.html">
-            <article class="work">
-                <img src="img/kmeans-thumbnail.jpg" 
-                     alt="A K-Means example thumbnail">
-                <h3>K-Means example</h3>
-            </article>
-        </a>
-
-        
-        <h2>Random</h2>
-        <a href="dots/dots.html">
-            <article class="work">
-                <img src="img/dots-thumbnail.jpg" 
-                     alt="A random graphic experiment thumbnail">
-                <h3>Dots</h3>
             </article>
         </a>
 
         <a href="carnical/carnical.html">
             <article class="work">
-                <img src="img/carnical-thumbnail.jpg" 
-                    alt="Thumbnail of a work/experiment about 
+                <img src="img/carnical-thumbnail.jpg" alt="Thumbnail of a work/experiment about 
                          sprite animations in javascript">
                 <h3>Carnical</h3>
             </article>
         </a>
+
+        <a href="kmeans/kmeans.html">
+            <article class="work">
+                <img src="img/kmeans-thumbnail.jpg" alt="A K-Means example thumbnail">
+                <h3>K-Means example</h3>
+            </article>
+        </a>
+
+
+        <a href="dots/dots.html">
+            <article class="work">
+                <img src="img/dots-thumbnail.jpg" alt="A random graphic experiment thumbnail">
+                <h3>Dots</h3>
+            </article>
+        </a>
+
+
     </main>
+
+    <footer>Copyright <span>&copy;</span> Alexander Vega Jiménez</footer>
 </body>
+
 </html>

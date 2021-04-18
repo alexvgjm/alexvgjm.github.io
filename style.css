@@ -228,6 +228,8 @@ input[type="checkbox"]:checked + label:not(.menu-button):after {
   margin: 0;
   padding: 0.25em 0;
   text-decoration: none;
+  display: none;
+
 }
 
 

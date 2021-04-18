@@ -4,6 +4,7 @@
     --color-lines:#7fc0bb;
     --color-font: #7fc0bb;
     --color-secondary: #d94878;
+    --color-background: #3b3b54;
 
     
     --color-range-sliders         : var(--color-font);
@@ -29,7 +30,7 @@ body {
     align-items     : center;
     height          : 100vh;
     font-family     : Helvetica, serif;
-    background-color: rgb(59, 59, 85);
+    background-color: var(--color-background);
 }
 main {
     text-align: center;

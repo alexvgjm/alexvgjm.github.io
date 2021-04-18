@@ -60,12 +60,12 @@ document.addEventListener("DOMContentLoaded", () => {
 window.onload = () => {
     const animBgCBox = document.getElementById('toggle-anim');
     const moreSugarCBox = document.getElementById('more-sugar');
-
+/*
     toggleAnim({ target: animBgCBox });
     console.log(animBgCBox.checked);
 
     console.log("test");
-    moreSugar(moreSugarCBox.checked);
+    moreSugar(moreSugarCBox.checked);*/
 }
 
 
