@@ -73,6 +73,11 @@ footer span {
     color: var(--color-second);
 }
 
+a {
+    color: var(--color-second);
+    text-decoration: underline;
+}
+
 #options {
     display: none;
 }
