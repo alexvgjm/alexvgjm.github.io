@@ -1,23 +1,9 @@
-/**
- *  Sitio en desarrollo.
- *  Esta hoja de estilos se ha desarrollado con Desktop First en mente,
- *  a CSS puro (sin pre/postprocesadores). El motivo es únicamente
- *  pedagógico y experimental, hasta ahora sólo había probado Mobile First.
- *  La página no es lo suficientemente amplia ni compleja como para percibir
- *  importantes diferencias.
- */
-
-@import url("https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap");
-
 :root {
-    --color-primary: #7fc0bb;
-    --color-second : #d94878;
-    --color-third  : #4a4a83;
-    --color-background: #3b3b54;
-
+    --color-primary               : #7fc0bb;
+    --color-second                : #d94878;
+    --color-third                 : #4a4a83;
+    --color-background            : #3b3b54;
     --color-background-transparent: #3b3b54ef;
-
-    --color-borders   : gray;
 }
 
 *,
@@ -39,39 +25,41 @@ html {
 }
 
 body {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    padding-bottom: 8em;
-    max-width: 1366px;
-    margin   : 0 auto;
+    display         : flex;
+    flex-flow       : column;
+    justify-content : center;
+    padding         : 2em 0 8em 0;
+    max-width       : 1366px;
+    margin          : 0 auto;
     background-color: var(--color-background);
-    color: var(--color-primary);
-    min-height: 100vh;
+    color           : var(--color-primary);
+    min-height      : 100vh;
 }
 
 
-header, footer {
+header,
+footer {
     text-align: center;
-    max-width: 480px;
-    margin: 0 auto;
-    width: 100%;
+    max-width : 480px;
+    margin    : 0 auto;
+    width     : 100%;
 }
 
 header {
-    border-bottom: 0.15rem solid var(--color-second);
+    border-bottom : 0.15rem solid var(--color-second);
     padding-bottom: 0.5em;
 }
 
 footer {
-    border-top: 0.15rem solid var(--color-second);
+    border-top : 0.15rem solid var(--color-second);
     padding-top: 0.5em;
-    margin-top: 2em;
+    margin-top : 2em;
 }
 
 h1 {
     margin-top: 0.3rem;
 }
+
 header p {
     margin-bottom: 0.5rem;
 }
@@ -99,37 +87,24 @@ footer span {
 }
 
 #photo img {
-    width: 7em;
+    width          : 7em;
     image-rendering: -moz-crisp-edges;
 }
 
 main {
-    display: flex;
+    display        : flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 480px;
-    margin: 0 auto;
-    padding: 1em;
+    flex-wrap      : wrap;
+    max-width      : 480px;
+    margin         : 0 auto;
+    padding        : 1em;
 }
 
-main > a {
-    width: 90%;
+main>a {
+    width     : 90%;
     margin-top: 2em;
-    position: relative;
+    position  : relative;
 }
-
-
-/*
-main > a::after {
-    content: ' ';
-    width: 100%;
-    border       : 0.15em solid var(--color-second);
-    position: absolute;
-    height: 100%;
-    z-index: -1;
-    right: -0.6em;
-    top: 0.6em;
-}*/
 
 .work {
     overflow: visible;
@@ -137,42 +112,45 @@ main > a::after {
 }
 
 .work h3 {
-    display: flex;
+    display        : flex;
     justify-content: center;
-    align-items: center;
+    align-items    : center;
 
-    border       : 0.15em solid var(--color-second);
-    position: absolute;
-    top: 0;
+    border   : 0.15em solid var(--color-second);
+    position : absolute;
+    top      : 0;
     transform: translate(5%, 10%) scaleY(1);
-    z-index: -1;
+    z-index  : -1;
 
-    width: 100%;
-    height: 100%;
+    width  : 100%;
+    height : 100%;
     padding: 0.3em 0;
 
-    font-size:2rem;
+    font-size : 2rem;
     text-align: center;
 
-    transition: all 0.35s;
+    transition      : all 0.35s;
     background-color: var(--color-background-transparent);
-    color: var(--color-primary);
+    color           : var(--color-primary);
 }
+
 .work:hover,
 a:focus .work {
-    overflow: visible;
-    position: relative;
+    overflow : visible;
+    position : relative;
     transform: scaleY(-1);
 }
+
 .work img {
-    transform: translate(0%, 0%) scaleY(1);
-    position: relative;
-    width: 100%;
-    display: block;
-    border       : 0.2em solid var(--color-primary);
+    transform : translate(0%, 0%) scaleY(1);
+    position  : relative;
+    width     : 100%;
+    display   : block;
+    border    : 0.2em solid var(--color-primary);
     transition: all 0.35s;
 
 }
+
 .work:hover img,
 a:focus .work img,
 a:active .work img {
@@ -182,25 +160,10 @@ a:active .work img {
 
 .work:hover h3,
 a:focus .work h3,
-a:active .work img {        
-    z-index: 1;
+a:active .work img {
+    z-index  : 1;
     transform: translate(0%, 0%) scaleY(-1);
 }
-
-
-/*
-.work h3::after {
-    content: ' ';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    color: var(--color-primary);
-    background-color: var(--color-background-transparent);
-    box-shadow: inset 0 0.1em 0 0em var(--color-second);
-    border-top       : 0.2em solid var(--color-primary);
-    background-color: red;
-}*/
 
 
 @media (min-width: 640px) {
@@ -208,7 +171,7 @@ a:active .work img {
         max-width: 800px;
     }
 
-    main > a {
+    main>a {
         width: 40%;
     }
 }
