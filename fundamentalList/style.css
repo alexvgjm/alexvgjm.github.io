@@ -1,0 +1,92 @@
+:root {
+    --color-font          : #7fc0bb;
+    --color-font-secondary           : #d94878;
+    --color-background               : #3b3b54;
+    --color-background-secondary     : #83344e;
+
+    --color-font-secondary-light: #f39eba;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    text-align: center;
+    max-width: 80%;
+    border-bottom: 0.05em solid var(--color-font-secondary);
+    margin: 1em auto 0.5em auto;
+    padding-bottom: 0.2em;
+}
+main {
+    padding-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+body {
+    background: var(--color-background);
+    color: var(--color-font);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+a {
+    color: var(--color-font-secondary);
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.copyleft {
+    display: inline-block;
+    transform: scaleX(-1);
+    color: var(--color-font-secondary);
+}
+
+
+ul.sortable {
+    list-style: none;
+    border: 0.1em solid var(--color-font-secondary);
+    padding: 0.4em;
+    font-size: 1.25rem;
+}
+
+ul.sortable li {
+    border: 0.1em solid var(--color-font);
+    padding: 0.3em;
+    min-width: 15em;
+    text-align: center;
+    user-select: none;
+    transition: margin 0.15s, border 0.1s;
+    cursor: move;
+}
+
+ul.sortable li:not(:first-child) {
+    margin-top: 0.4em;
+}
+
+ul.sortable:not(:active) li:hover,
+ul.sortable li.dragging {
+    background-color: var(--color-background-secondary);
+    border-color: var(--color-font-secondary);
+    color: var(--color-font-secondary-light);
+}
+
+ul.sortable li.dragging {
+    border: 0.1em dashed var(--color-font-secondary);
+    margin-top: 1em;
+}
+
+ul.sortable .dragging + li {
+    margin-top: 1em;
+}
