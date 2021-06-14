@@ -20,6 +20,10 @@ h1 {
     margin: 1em auto 0.5em auto;
     padding-bottom: 0.2em;
 }
+
+p { 
+    text-align: center;
+}
 main {
     padding-top: 1em;
     display: flex;
