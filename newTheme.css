@@ -180,3 +180,18 @@ a:active .work img {
         width: 40%;
     }
 }
+
+@media (min-width: 1024px) {
+    main>a {
+        width: 30%;
+    }
+}
+
+@media (min-width: 1280px) {
+    main {
+        max-width: 1024px;
+    }
+    main>a {
+        width: 30%;
+    }
+}
