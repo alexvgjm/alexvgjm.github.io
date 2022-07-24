@@ -116,7 +116,7 @@ main>a {
     position: relative;
 }
 
-.work h3 {
+.work__title {
     display        : flex;
     justify-content: center;
     align-items    : center;
@@ -139,6 +139,10 @@ main>a {
     color           : var(--color-primary);
 }
 
+.work__title--small {
+    font-size: 1.3rem;
+}
+
 .work:hover,
 a:focus .work {
     overflow : visible;
@@ -146,7 +150,7 @@ a:focus .work {
     transform: scaleY(-1);
 }
 
-.work img {
+.work__thumbnail {
     transform : translate(0%, 0%) scaleY(1);
     position  : relative;
     width     : 100%;
@@ -156,16 +160,16 @@ a:focus .work {
 
 }
 
-.work:hover img,
-a:focus .work img,
-a:active .work img {
+.work:hover .work__thumbnail,
+a:focus .work__thumbnail,
+a:active .work__thumbnail {
     transform: translate(5%, -10%) scaleY(-1);
 
 }
 
-.work:hover h3,
-a:focus .work h3,
-a:active .work img {
+.work:hover .work__title,
+a:focus .work__title,
+a:active .work__thumbnail {
     z-index  : 1;
     transform: translate(0%, 0%) scaleY(-1);
 }
