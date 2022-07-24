@@ -20,6 +20,26 @@
     --button-radius: 0;
   
     --font-family: Helvetica, sans-serif;
+
+    --color-info-lightest:  #ebf0fc;
+    --color-info:           #a5bef6;
+    --color-info-dark:      #677caa;
+    --color-info-darker:    #4a5d85;
+
+    --color-success-lightest:   #edffdd;
+    --color-success:            #91c461;
+    --color-success-dark:       #649433;
+    --color-success-darker:     #476e21;
+
+    --color-danger-lightest:#fdeeee;
+    --color-danger:         #b73b3b;
+    --color-danger-dark:    #9a3838;
+    --color-danger-darker:  #6b2020;
+
+    --color-option-lightest:#fceefd;
+    --color-option:         #a07eb5;
+    --color-option-dark:    #8a69a0;
+    --color-option-darker:  #3b0b5e;
   }
 
 *, *::before, *::after {
@@ -42,7 +62,7 @@ body {
 
 header {
     padding: 0.75em 0;
-    border-bottom: 0.2rem dashed gray;
+    border-bottom: 0.2rem dashed var(--color-borders)
 }
 
 
@@ -70,19 +90,12 @@ main p {
 canvas {
     margin-top: 0.5em;
     width: 100%;
-    background-color: rgba(19, 19, 19, 0.91);
-    border: 0.1em dashed gray;
+    background-color: #131313e8;
+    border: 0.1em dashed var(--color-borders);
     border-radius: 0.2em;
 }
 
-button, input {
-    padding: 0.1em 0.5em;
-    text-align: center;
-    text-shadow: 0.1em 0.1em 0.05em #000;
-    background-color: rgb(79, 98, 100);
-    border-radius: 0.2em;
-    border: 0.2em solid rgb(47, 51, 61);
-}
+
 
 main p {
     margin: 0.5em 0;
@@ -99,67 +112,38 @@ main h2:not(:first-child) {
     margin-top: 1em;
 }
 
-.new-example {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-
-.new-example p {
-    width: 100%;
-}
-
-.new-example button {
-    margin: 0.5em 0.25em 0 0.25em;
-    font-size: 1.1rem;
-
-}
-
-.new-example button:hover,
-#page-info button:hover {
-    background-color: rgb(20, 99, 119);
-    border: 0.2em solid rgb(8, 63, 80);
-}
-
-.sidebar section {
-    margin-top: 1em;
-}
 
 .range {
     display: inline-flex;
     justify-content: center;
+    margin-right: 0.5em;
+    flex-direction: column;
 }
-.range button:first-of-type {
-    background-color: rgb(119, 51, 20);
-    border: 0.2em solid rgb(80, 25, 8);
-}
-
-.range button:first-of-type:hover {
-    background-color: rgb(138, 60, 23);
-    border: 0.2em solid rgb(102, 32, 10);
+.range__button.range__button--sub {
+    color: var(--color-danger-lightest);
+    border-color: var(--color-danger);
+    background: var(--color-danger-darker);
 }
 
-.range button:nth-of-type(2),
-.new-example button.active {
-    background-color: rgb(20, 119, 53);
-    border: 0.2em solid rgb(8, 80, 32);
+.range__button.range__button--sub:hover {
+    background: var(--color-danger-dark);
 }
 
-.range button:nth-of-type(2):hover,
-.new-example button.active:hover {
-    background-color: rgb(26, 148, 67);
-    border: 0.2em solid rgb(25, 124, 58);
-}
-.range input[type="text"] {
-    width: 3em;
-    margin: 0;
+.range__button.range__button--add {
+    color: var(--color-success-lightest);
+    border-color: var(--color-success);
+    background: var(--color-success-darker);
 }
 
-#page-info button{
-    float: right;
-    font-size: 1.2rem;
-    margin: 0.75em 0 0.75em 0.5em;
+.range__button.range__button--add:hover {
+    background: var(--color-success-dark);
 }
+
+.range__controls {
+    display: flex;
+    align-items: flex-end;
+}
+
 
 .error {
     color: #f88;
@@ -167,73 +151,74 @@ main h2:not(:first-child) {
     display: none;
 }
 
-.switch {
-    display: inline-flex;
-}
-.switch button {
-    border-color: rgb(14, 92, 59);
-    font-size: 1.25rem;
-}
-.switch button:first-child {
-    margin-right: 0;
-    border-right: none;
-    border-radius: 0.2em 0 0 0.2em;
-}
-.switch button:nth-child(2) {
-    margin-left: 0;
-    border-left: none;
-    border-radius: 0 0.2em 0.2em 0;
-}
-
-.switch button.active {
-    background-color: rgb(14, 92, 59);
-
-}
-
-.switch button:not(.active) {
-    background-color: rgb(38, 40, 41);
-}
-
-.switch button:not(.active):hover {
-    background-color: rgb(4, 41, 71);
-}
-
-.mode-info {
-    font-size: 0.9rem;
-    margin-left: 0.6em;
-    font-style: italic;
-}
-
-.range {
-    margin-right: 0.5em;
-}
-.range button {
-    width: 2.2em;
-}
 .controls {
     margin-top: 1em;
     display: flex;
+    justify-content: center;
+    align-items: flex-end;
     flex-wrap: wrap;
 }
-.secondary-controls {
-    display: flex;
-    width: 100%;
-    margin-top: 0.5em;
-    justify-content: center;
-    align-items: center;
-}
-.secondary-controls button {
-    padding: 0.5em;
-}
-.secondary-controls > button:not(:first-child) {
-    margin-left: 2em;
-}
-.seeds-control { 
-    display: none; 
+
+.controls__control {
+    margin-right: 0.5em;
 }
 
-.random-control {
-    border: 1px dashed gray;
-    padding: 0.4em;
-    margin-left: 0.4em;
+.controls__control,
+.range__button,
+.range__input {
+    margin-top: 0.5em;
+    padding: 0.5em 0.75em;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.05em #000;
+    background-color: rgb(79, 98, 100);
+    border-radius: 0.2em;
+    border: 0.15em solid #2f333d;
+    font-size: 1rem;
+    min-width: 2.5em;
+}
+
+.range__label {
+    display: block;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.range__input {
+    width: 4em;
+    margin: 0;
+    color: var(--color-option-lightest);
+    border-color: var(--color-option-dark);
+    background: var(--color-option-darker);
+}
+
+.controls__control--example {
+    color: var(--color-info-lightest);
+    border-color: var(--color-info);
+    background: var(--color-info-darker);
+}
+
+
+.controls__control--place-seeds {
+    color: var(--color-success-lightest);
+    border-color: var(--color-success);
+    background: var(--color-success-darker);
+}
+
+.controls__control--clear-data,
+.controls__control--clear-seeds {
+    color: var(--color-danger-lightest);
+    border-color: var(--color-danger);
+    background: var(--color-danger-darker);
+}
+
+.controls__control--clear-data:hover,
+.controls__control--clear-seeds:hover {
+    background: var(--color-danger-dark);
+}
+
+.controls__control--place-seeds:hover{
+    background: var(--color-success-dark);
+}
+.controls__control--example:hover{
+    background: var(--color-info-dark);
 }

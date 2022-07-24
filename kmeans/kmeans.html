@@ -20,23 +20,20 @@
         
         <p>Distribuye tus datos haciendo click en el área de abajo, idealmente formando grupos, 
             y añade tantas semillas como grupos quieras detectar.</p> 
-        <p>Si lo prefieres, puedes <button onclick="loadExample()">pulsar aquí</button> para cargar un conjunto de datos de 3 grupos.</p>
-            
         <section class="controls">
-            <section class="secondary-controls">
-                <button onclick="clearData()">Borrar datos</button>
-                
-                <div class="random-control">
-                    <label for="randomSeeds">Grupos: </label>
-                    <div class="range">
-                        <button onclick="rangeControl(-1, 'randomSeeds')">-</button>
-                        <input type="text" id="randomSeeds" value="3" min="1" max="5" disabled >
-                        <button onclick="rangeControl(1, 'randomSeeds')">+</button>
-                    </div>
-                    <button onclick="placeSeedsRandomly()">Insertar semillas de forma aleatoria</button>
-                    <button onclick="clearSeeds()">Borrar semillas</button>
+            <div class="range">
+                <label  class="range__label" for="randomSeeds">Grupos</label>
+                <div class="range__controls">
+                    <button class="range__button range__button--sub" onclick="rangeControl(-1, 'randomSeeds')">-</button>
+                    <input  class="range__input" type="text" id="randomSeeds" value="3" min="1" max="5" disabled >
+                    <button class="range__button range__button--add" onclick="rangeControl(1, 'randomSeeds')">+</button>
                 </div>
-            </section>
+            </div>
+
+            <button class="controls__control controls__control--example"    >Datos aleatorios</button>
+            <button class="controls__control controls__control--place-seeds">Insertar semillas</button>
+            <button class="controls__control controls__control--clear-data" >Borrar datos</button>
+            <button class="controls__control controls__control--clear-seeds">Borrar semillas</button>
         </section>
         
 
