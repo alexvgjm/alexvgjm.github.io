@@ -159,6 +159,8 @@ main h2:not(:first-child) {
     flex-wrap: wrap;
 }
 
+
+
 .controls__control {
     margin-right: 0.5em;
 }
@@ -221,4 +223,39 @@ main h2:not(:first-child) {
 }
 .controls__control--example:hover{
     background: var(--color-info-dark);
+}
+
+@media (max-width: 800px) {
+    .controls {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .controls__range {
+        grid-column: 1 / span 2;
+        justify-content: center;
+    }
+
+    .range__controls {
+        margin: 0 auto;
+        width: 60%;
+    }
+
+    .controls__range .range__input {
+        width: auto;
+        flex-grow: 1;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .range__controls {
+        width: 100%;
+    }
+    .controls__range .range__input {
+        width: 3em;
+    }
+    .controls__control {
+        grid-column: 1 / span 2;
+    }
 }
