@@ -1,9 +1,13 @@
-# Fundamental Sortable List using HTML5 Drag and Drop API
-This is a fundamental UI web element. You can understand "fundamental" as an educational super adaptable, evergreen or long-term compatibility example usable in any modern standard tech ecosystem without dependencies or knowledge of the external and unstable tech ecosystem. It seeks to be a piece in a good teaching that leads better to understand the state of the art in the long term.
+# HTML5 Drag and Drop API Interoperability Status tracker
+A simple example to test or track the HTML5 Drag & Drop API on mobile devices.
+
+As soon as support for different operating systems and underlying hardware expands, this can be considered a _fundamental_ UI web element. You can understand "fundamental" as an educational super adaptable, evergreen or long-term compatibility example usable in any modern standard tech ecosystem without dependencies or knowledge of the external and unstable tech ecosystem. It seeks to be a piece in a good teaching that leads better to understand the state of the art in the long term.
 
 ## Description
 - A simple non-shared (closed) sortable vertical list.
 - Easy to modify or extend to horizontal list and shared (open) lists.
+
+See a demo [on my portfolio](https://alexvgjm.github.io/fundamentalList/index.html).
 
 ## About the Fundamentalist Programming Philosophy
 The goal of the fundamentalist programming philosophy (FPP) is to reduce the gap between the academic world and the state of the art by empowering the most widespread, interoperable, free, up-to-date and easy-to-learn standard technologies.
@@ -17,7 +21,7 @@ A fundamental web element should be:
 - Agnostic and pure (raw). No third party dependencies in production. Using only standard web technologies and formats (HTML5, CSS3, vanilla/node JavaScript, JSON, etc.). You can use development tools (i.e. CSS preprocessors, JS bundlers, transpilers, ...) but only if you make sure that the distributed version meets all requirements in this list without the knowledge of the used tools. That is, without coupling students or developers to such technologies.
 - Free as in Freedom. Published to Public Domain or under some Free Software compatible license.
 
-Fundamental philosophy does not force you to follow any particular development methodology or conventions (i.e. CSS BEM). Some form of testing is not mandatory but highly recommended. Due the lack of standard testing libraries in some languages, we consider legit the use and distribution of code using free third party testing libraries (i.e. Mocha, Jest, etc.).
+Fundamentalist programming philosophy does not force you to follow any particular development methodology or conventions (i.e. CSS BEM). Some form of testing is not mandatory but highly recommended. Due the lack of standard testing libraries in some languages, we consider legit the use and distribution of code using free third party testing libraries (i.e. Mocha, Jest, etc.).
 
 Self-explanatory comment-less clean code is always good but due to the teaching purpose consider comment key parts.
 
