@@ -29,7 +29,7 @@ body {
     flex-flow       : column;
     justify-content : center;
     padding         : 2em 0 8em 0;
-    max-width       : 1366px;
+    max-width       : 1024px;
     margin          : 0 auto;
     background-color: var(--color-background);
     color           : var(--color-primary);
@@ -78,10 +78,6 @@ a {
     text-decoration: underline;
 }
 
-#options {
-    display: none;
-}
-
 #photo {
     border       : 0.2em solid var(--color-second);
     border-radius: 50%;
@@ -96,16 +92,15 @@ a {
     image-rendering: -moz-crisp-edges;
 }
 
-main {
+.works {
     display        : flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap      : wrap;
-    max-width      : 480px;
     margin         : 0 auto;
     padding        : 1em;
 }
 
-main>a {
+.works > a {
     width     : 90%;
     margin-top: 2em;
     position  : relative;
@@ -176,26 +171,14 @@ a:active .work__thumbnail {
 
 
 @media (min-width: 640px) {
-    main {
-        max-width: 800px;
-    }
-
-    main>a {
+    .works > a {
         width: 40%;
+        margin-right: 2em;
     }
 }
 
 @media (min-width: 1024px) {
-    main>a {
-        width: 30%;
-    }
-}
-
-@media (min-width: 1280px) {
-    main {
-        max-width: 1024px;
-    }
-    main>a {
+    .works > a {
         width: 30%;
     }
 }
