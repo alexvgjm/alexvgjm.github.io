@@ -29,6 +29,9 @@
     padding: 0 var(--space);
 }
 
+.post-summary__published {
+    margin-top: var(--h-space);
+}
 
 .post-summary:not(:first-of-type) {
     margin-top: var(--x1_5-space);

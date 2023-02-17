@@ -17,7 +17,7 @@
     padding-bottom: var(--space);
 }
 
-.post__header *:last-child {
+.post__header > *:last-child {
     padding-bottom: var(--space);
     border-bottom: var(--border-size) solid var(--color-border-2);
 }
