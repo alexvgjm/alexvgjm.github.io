@@ -190,7 +190,7 @@
         border-bottom: 0.4rem solid var(--color-bg-primary-2);
     }
 
-    .main-nav__link--active
+    .main-nav__link--active,
     .main-nav__link--active:visited {
         border-bottom: 0.4rem solid var(--color-bg-primary-2);
     }
