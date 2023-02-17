@@ -185,6 +185,8 @@
     .main-nav__link:visited {
         padding: var(--q-space) var(--space) var(--h-space) var(--space);
         border: 0.2rem solid transparent;
+        min-width: 12rem;
+        text-align: center;
     }
     .main-nav__link:hover {
         border-bottom: 0.4rem solid var(--color-bg-primary-2);
@@ -196,6 +198,10 @@
     }
     .main-nav__link::before {
         display: none;
+    }
+
+    .main-nav {
+        justify-content: center;
     }
 }
 
