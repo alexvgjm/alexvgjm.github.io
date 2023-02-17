@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 0.05em 0.05em black;
+    letter-spacing: 0.1ch;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    background: var(--color-bg-primary-2);
+    color: var(--color-font-primary);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-weight: 350;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: var(--color-heading);
+}
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child),
+h4:not(:first-child),
+h5:not(:first-child),
+h6:not(:first-child) {
+    margin-top: var(--space);
+}
+
+ul, ol {
+    list-style-position: inside;
+    margin-top: var(--space);
+}
+ul {
+    list-style: none;
+  }
+  
+li::before {
+    content: "• ";
+    color: var(--color-second);
+}
+
+li > ul {
+    margin-top: 0;
+}
+
+li > ul > li:last-child {
+    margin-bottom: var(--h-space);
+}
+
+li {
+    margin-top: var(--q-space);
+    margin-left: 1rem;
+    font-weight: 350;
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--color-link);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p, li, blockquote {
+    opacity: 0.86;
+    font-weight: 350;
+}
+
+li li {
+    opacity: 1;
+}
+
+p {
+    margin-top: var(--space);
+    line-height: var(--x1_5-em-space);
+}
+
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+    margin-top: var(--q-space);
+}
+
+strong, em {
+    color: var(--color-second-light);
+}
+
+em {
+    font-weight: 400;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+pre {
+    margin-top: var(--space);
+    background: var(--color-bg-primary-2);
+    padding: var(--space);
+    margin: var(--space) 0;
+}
+pre code {
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: normal;
+}
+
+figcaption {
+    font-style: italic;
+    text-align: center;
+    color: var(--color-font-primary);
+    font-weight: normal;
+}
+
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: var(--space) auto;
+}
+caption {
+    border: var(--border-size) var(--table-border-style) var(--table-border-color);
+    border-radius: var(--q-space) var(--q-space) 0 0;
+    font-weight: bold;
+    padding: var(--h-space);
+}
+
+th:not(:empty), td {
+    border-bottom: var(--border-size) var(--table-border-style) var(--table-border-color);
+    border-right: var(--border-size) var(--table-border-style) var(--table-border-color);
+    padding: var(--h-space);
+}
+
+td:first-child,
+th:first-child {
+    border-left: var(--border-size) var(--table-border-style) var(--table-border-color);
+}
+
+thead > tr:first-child > th {
+    border-top: var(--border-size) var(--table-border-style) var(--table-border-color);
+}
+
+thead > tr:first-child > th:first-child {
+    border-radius: var(--q-space) 0 0 0;
+}
+thead > tr:first-child > th:last-child {
+    border-radius: 0 var(--q-space) 0 0;
+}
+
+
+
+thead,
+caption {
+    background: var(--table-bg-header);
+}
+
+tbody > tr:nth-child(even) > th {
+    background: var(--table-bg-even-row-header);
+}
+tbody > tr:nth-child(odd) > th {
+    background: var(--table-bg-odd-row-header);
+}
+
+tbody > tr:nth-child(even) {
+    background: var(--table-bg-even-row);
+}
+tbody > tr:nth-child(odd) {
+    background: var(--table-bg-odd-row);
+}
+

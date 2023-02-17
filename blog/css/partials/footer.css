@@ -1,0 +1,10 @@
+.main-footer {
+    background: var(--color-background-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--x2-space) 0;
+    margin-top: auto;
+    text-align: center;
+}

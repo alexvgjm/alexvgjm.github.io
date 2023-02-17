@@ -1,0 +1,24 @@
+.about__author {
+    order: -1;
+    width: 80%;
+    max-width: 256px;
+    display: block;
+    margin: 1rem auto;
+    margin-top: 2rem;
+    box-shadow: 0 0 0.5rem var(--color-second);
+
+    filter: hue-rotate(var(--hue-rotation));
+
+    border-radius: 50%;
+    
+    /*-webkit-mask-image:-webkit-radial-gradient(circle, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: radial-gradient(circle,  rgba(0,0,0,1) 60%, rgba(0,0,0,0) 60%);*/
+}
+
+@media (min-width: 768px) {
+    .about__author {
+        max-width: 368px;
+        float: right;
+        margin-left: 2rem;
+    }
+}
